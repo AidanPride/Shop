@@ -1,13 +1,13 @@
 
 public class Purchase {
     Buyer buyer;
-    Product product;
+    Jewelry jewelry;
 
     public Purchase() {
     }
 
-    public Purchase(Buyer buyer, Product product) {
+    public Purchase(Buyer buyer, Jewelry jewelry) {
         this.buyer = buyer;
-        this.product = product;
+        this.jewelry = jewelry;
     }
 }

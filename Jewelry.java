@@ -1,13 +1,13 @@
 
-public class Product {
+public class Jewelry {
     private String name;
     private int price;
     private int count;
 
-    public Product() {
+    public Jewelry() {
     }
 
-    public Product(int count, String name, int price) {
+    public Jewelry(int count, String name, int price) {
         this.count = count;
         this.name = name;
         this.price = price;
