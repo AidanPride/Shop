@@ -3,7 +3,10 @@
  */
 public class Earrings extends Jewelry {
 
-    public Earrings(int count, String name, int price) {
-        super(count, name, price);
+    public Earrings() {
+    }
+
+    public Earrings(String article, String name, Stone stone, Color color, int price, int count) {
+        super(article, name, stone, color, price, count);
     }
 }
