@@ -13,6 +13,8 @@ public class Demo{
         service.saleLast7Days(shop, 20160217);
         service.sellInDay(shop, 20160216);
 
+        ShopGUI shopGUI = new ShopGUI();
+
     }
 
 }
