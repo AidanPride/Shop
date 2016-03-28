@@ -1,5 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 /**
  * Created by User on 28.03.2016.
@@ -23,7 +25,7 @@ public class ShopGUI{
         JLabel productList = new JLabel("product");
         JRadioButton pList = new JRadioButton();
         JTextField pCount = new JTextField("enter count", 15);
-        JButton buy = new JButton("Buy");
+        JButton btnBuy = new JButton("Buy");
         panel.add(buyerName, new GridBagConstraints(0, 0, 1, 1, 0, 0, GridBagConstraints.LINE_START, 0, new Insets(50,50,50,50), 0 ,0));
         panel.add(bName, new GridBagConstraints(0, 1, 1, 1, 0, 0, GridBagConstraints.LINE_START, 0, new Insets(50,50,50,50), 0 ,0));
 
@@ -31,7 +33,13 @@ public class ShopGUI{
         panel.add(pList, new GridBagConstraints(1, 1, 1, 1, 0, 0, GridBagConstraints.LINE_START, 0, new Insets(50,50,50,50), 0 ,0));
         panel.add(pCount, new GridBagConstraints(2, 0, 1, 1, 0, 0, GridBagConstraints.LINE_START, 0, new Insets(50,50,50,50), 0 ,0));
 
-        panel.add(buy, new GridBagConstraints(3, 1, 1, 1, 0, 0, GridBagConstraints.LINE_START, 0, new Insets(50,50,50,50), 0 ,0));
+        panel.add(btnBuy, new GridBagConstraints(3, 1, 1, 1, 0, 0, GridBagConstraints.LINE_START, 0, new Insets(50,50,50,50), 0 ,0));
+        btnBuy.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println("Transaction done");
+            }
+        });
         return panel;
     }
 }
