@@ -1,3 +1,8 @@
+package shop.product;
+
+import shop.Color;
+import shop.Stone;
+
 public class Jewelry {
     private String article;
     private String name;
@@ -23,13 +28,11 @@ public class Jewelry {
     }
 
     public void setCount(int count) {
-        if(count <0){
-            if(this.count<-count){
-                System.out.println("You have only " + this.count +". You can't sell it");
+        if(this.count <count){
+             System.out.println("You have only " + this.count +". You can't sell it");
                 return;
-            }
         }
-        this.count = +count;
+        this.count = -count;
     }
 
     public String getName() {

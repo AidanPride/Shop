@@ -1,3 +1,7 @@
+package shop;
+
+import shop.product.Jewelry;
+
 import java.util.Date;
 
 public class Service {
@@ -43,7 +47,7 @@ public void sellInDay(Shop shop,Date nowDate){
     System.out.println("in total "+(n-1)+" purchases                "+daySale+"    "+ollAmount);
 
 }
-//    public static void saleLast7Days(Shop shop, Date nowDay){
+//    public static void saleLast7Days(shop.Shop shop, Date nowDay){
 //        System.out.println("Sale last 7 days");
 //        int count = 0;
 //        for(int i = nowDay-7; i<nowDay; i++){

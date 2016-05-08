@@ -1,3 +1,5 @@
+package shop.gui;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -5,6 +7,8 @@ import java.awt.event.ActionListener;
 import java.text.NumberFormat;
 import java.util.Date;
 import java.util.Vector;
+import shop.*;
+import shop.product.Jewelry;
 
 
 public class ShopGUI{
@@ -15,16 +19,16 @@ public class ShopGUI{
         this.shop=shop;
         vector = new Vector<>();
         vector.addAll(shop.getProductAll());
-        JFrame f = new JFrame("Shop");
+        JFrame f = new JFrame("shop.Shop");
         f.setLocation(100,100);
         f.setMinimumSize(new Dimension(400,400));
-        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        f.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         f.setContentPane(createPanel());
         f.pack();
         f.setVisible(true);
     }
 
-    private JPanel createPanel(){
+    JPanel createPanel(){
         JPanel panel = new JPanel();
         panel.setLayout(new GridBagLayout());
 

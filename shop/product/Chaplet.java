@@ -1,3 +1,7 @@
+package shop.product;
+
+import shop.Color;
+import shop.Stone;
 
 public class Chaplet extends Jewelry {
     public Chaplet() {

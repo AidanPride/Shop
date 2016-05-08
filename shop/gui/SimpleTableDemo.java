@@ -1,3 +1,7 @@
+package shop.gui;
+
+import shop.Shop;
+
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
@@ -17,7 +21,7 @@ public class SimpleTableDemo extends JPanel {
 
         String[] columnNames = {"Article",
                 "Name",
-                "Buyer Name",
+                "shop.Buyer Name",
                 "amount",
                 "data"};
         Object[][] data = new Object[shop.getHistory().size()][5];
@@ -69,7 +73,7 @@ public class SimpleTableDemo extends JPanel {
      */
     public  void createAndShowGUI() {
         //Create and set up the window.
-        JFrame frame = new JFrame("SimpleTableDemo");
+        JFrame frame = new JFrame("shop.gui.SimpleTableDemo");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         //Create and set up the content pane.

@@ -1,3 +1,7 @@
+package shop;
+
+import shop.product.Jewelry;
+
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -16,7 +20,7 @@ public class Purchase {
         this.buyer = buyer;
         this.jewelry = jewelry;
         this.count=count;
-        jewelry.setCount(-count);
+        jewelry.setCount(count);
         DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
         buyDate = new Date();
         profit = count*jewelry.getPrice();

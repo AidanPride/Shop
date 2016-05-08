@@ -1,4 +1,8 @@
-import java.util.Date;
+package shop;
+
+import shop.gui.MainWindow;
+import shop.gui.ShopGUI;
+import shop.product.Jewelry;
 
 public class Demo{
 
@@ -13,10 +17,11 @@ public class Demo{
         service.prices(shop);
         service.store(shop);
 
-//        ShopGUI shopGUI = new ShopGUI(shop);
+//        shop.gui.ShopGUI shopGUI = new shop.gui.ShopGUI(shop);
 //        service.sellInDay(shop, new Date());
-        SimpleTableDemo tableDemo = new SimpleTableDemo(shop);
-        tableDemo.createAndShowGUI();
+        MainWindow mainWindow = new MainWindow(shop);
+//        shop.gui.SimpleTableDemo tableDemo = new shop.gui.SimpleTableDemo(shop);
+//        tableDemo.createAndShowGUI();
 
 
     }

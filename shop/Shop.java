@@ -1,3 +1,7 @@
+package shop;
+
+import shop.product.*;
+
 import java.util.ArrayList;
 
 public class Shop {

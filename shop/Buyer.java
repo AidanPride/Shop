@@ -1,3 +1,4 @@
+package shop;
 
 public class Buyer {
 private String name;
