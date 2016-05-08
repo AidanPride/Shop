@@ -1,6 +1,5 @@
-/**
- * Created by User on 21.02.2016.
- */
+import java.util.Date;
+
 public class Service {
     private Jewelry jewelry;
      private Buyer buyer;
@@ -22,7 +21,7 @@ public class Service {
         }
     }
 
-public void sellInDay(Shop shop,int nowDate){
+public void sellInDay(Shop shop,Date nowDate){
     System.out.println("                  printTransToday               ");
     System.out.println("------------------------------------------------");
     System.out.println("№ Cusomer     Product            Price   Amount");
@@ -30,34 +29,34 @@ public void sellInDay(Shop shop,int nowDate){
     int ollAmount = 0;
     int daySale = 0;
     System.out.println("------------------------------------------------");
-    for(int i=0;i<shop.getHistory().length;i++){
-        if(shop.getHistory()[i].getBuyDate()==nowDate){
-            System.out.println(n +" |"+shop.getHistory()[i].getBuyer().getName()+"     |"+shop.getHistory()[i].getJewelry().getName()
-                    +" "+shop.getHistory()[i].getJewelry().getStone()+" |"+shop.getHistory()[i].getJewelry().getPrice()+
-                    "    |"+shop.getHistory()[i].getCount()+" |");
+    for(int i=0;i<shop.getHistory().size();i++){
+        if(shop.getHistory().get(i).getBuyDate()==nowDate){
+            System.out.println(n +" |"+shop.getHistory().get(i).getBuyer().getName()+"     |"+shop.getHistory().get(i).getJewelry().getName()
+                    +" "+shop.getHistory().get(i).getJewelry().getStone()+" |"+shop.getHistory().get(i).getJewelry().getPrice()+
+                    "    |"+shop.getHistory().get(i).getCount()+" |");
             n++;
-            daySale+=shop.getHistory()[i].getJewelry().getPrice()*shop.getHistory()[i].getCount();
-            ollAmount+=shop.getHistory()[i].getCount();
+            daySale+=shop.getHistory().get(i).getJewelry().getPrice()*shop.getHistory().get(i).getCount();
+            ollAmount+=shop.getHistory().get(i).getCount();
         }
     }
     System.out.println("------------------------------------------------");
     System.out.println("in total "+(n-1)+" purchases                "+daySale+"    "+ollAmount);
 
 }
-    public static void saleLast7Days(Shop shop,int nowDay){
-        System.out.println("Sale last 7 days");
-        int count = 0;
-        for(int i = nowDay-7; i<nowDay; i++){
-            for(int k = 0;k<shop.getHistory().length;k++){
-                if(shop.getHistory()[k].getBuyDate()== i){
-                    count+=shop.getHistory()[k].getCount();
-
-                }
-
-
-            }
-            System.out.println(i+"-"+count);
-            count=0;
-        }
-    }
+//    public static void saleLast7Days(Shop shop, Date nowDay){
+//        System.out.println("Sale last 7 days");
+//        int count = 0;
+//        for(int i = nowDay-7; i<nowDay; i++){
+//            for(int k = 0;k<shop.getHistory().size();k++){
+//                if(shop.getHistory().get(k).getBuyDate()== i){
+//                    count+=shop.getHistory().get(k).getCount();
+//
+//                }
+//
+//
+//            }
+//            System.out.println(i+"-"+count);
+//            count=0;
+//        }
+//    }
 }

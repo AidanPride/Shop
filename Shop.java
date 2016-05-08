@@ -1,51 +1,50 @@
-/**
- * Created by User on 21.02.2016.
- */
+import java.util.ArrayList;
+
 public class Shop {
-    private Jewelry[] productAll = new Jewelry[20];
+    private ArrayList<Jewelry> productAll = new ArrayList<>();
     private Jewelry[][] productByClass;
     private Buyer buyer;
     private Buyer[] customers = new Buyer[4];
-    private Purchase[] history = new Purchase[7];
+    private ArrayList<Purchase> history = new ArrayList<Purchase>();
 
     public Shop() {
         shopInit();
     }
 
     public void shopInit(){
-        productAll[0] = new Band("OS1", "band1", Stone.AGATE, Color.BLACK, 100, 20);
-        productAll[1] = new Band("OS2", "band2", Stone.AGATE, Color.BLACK, 101, 21);
-        productAll[2] = new Band("OS3", "band3", Stone.AGATE, Color.BLACK, 101, 21);
-        productAll[3] = new Band("OS4", "band4", Stone.AGATE, Color.BLACK, 150, 27);
-        productAll[4] = new Band("OS5", "band5", Stone.AGATE, Color.BLACK, 201, 121);
-        productAll[5] = new Chaplet("AS1", "chaplet1", Stone.CORAL, Color.RED, 50, 21);
-        productAll[6] = new Chaplet("AS2", "chaplet2", Stone.CORAL, Color.RED, 52, 211);
-        productAll[7] = new Chaplet("AS3", "chaplet3", Stone.CORAL, Color.RED, 50, 11);
-        productAll[8] = new Chaplet("AS4", "chaplet4", Stone.CORAL, Color.RED, 50, 21);
-        productAll[9] = new Chaplet("AS5", "chaplet5", Stone.CORAL, Color.RED, 50, 21);
-        productAll[10] = new Earrings("IS1", "earrning1", Stone.GARNET, Color.LIGHT_GREEN, 50, 21);
-        productAll[11] = new Earrings("IS2", "earrning2", Stone.GARNET, Color.LIGHT_GREEN, 50, 21);
-        productAll[12] = new Earrings("IS3", "earrning3", Stone.MALACHITE, Color.BLUE, 50, 21);
-        productAll[13] = new Earrings("IS4", "earrning4", Stone.MALACHITE, Color.BLUE, 50, 21);
-        productAll[14] = new Earrings("IS4", "earrning5", Stone.MALACHITE, Color.BLUE, 50, 21);
-        productAll[15] = new Pendant("SS1", "pendant1", Stone.CORAL, Color.GREEN, 50, 21);
-        productAll[16] = new Pendant("SS2", "pendant2", Stone.CORAL, Color.GREEN, 50, 21);
-        productAll[17] = new Pendant("SS3", "pendant3", Stone.CORAL, Color.GREEN, 50, 21);
-        productAll[18] = new Pendant("SS4", "pendant4", Stone.CORAL, Color.GREEN, 50, 21);
-        productAll[19] = new Pendant("SS5", "pendant5", Stone.CORAL, Color.GREEN, 50, 21);
+        productAll.add(new Band("OS1", "band1", Stone.AGATE, Color.BLACK, 100, 20));
+        productAll.add(new Band("OS2", "band2", Stone.AGATE, Color.BLACK, 101, 21));
+        productAll.add(new Band("OS3", "band3", Stone.AGATE, Color.BLACK, 101, 21));
+        productAll.add(new Band("OS4", "band4", Stone.AGATE, Color.BLACK, 150, 27));
+        productAll.add(new Band("OS5", "band5", Stone.AGATE, Color.BLACK, 201, 121));
+        productAll.add(new Chaplet("AS1", "chaplet1", Stone.CORAL, Color.RED, 50, 21));
+        productAll.add(new Chaplet("AS2", "chaplet2", Stone.CORAL, Color.RED, 52, 211));
+        productAll.add(new Chaplet("AS3", "chaplet3", Stone.CORAL, Color.RED, 50, 11));
+        productAll.add(new Chaplet("AS4", "chaplet4", Stone.CORAL, Color.RED, 50, 21));
+        productAll.add(new Chaplet("AS5", "chaplet5", Stone.CORAL, Color.RED, 50, 21));
+        productAll.add(new Earrings("IS1", "earrning1", Stone.GARNET, Color.LIGHT_GREEN, 50, 21));
+        productAll.add(new Earrings("IS2", "earrning2", Stone.GARNET, Color.LIGHT_GREEN, 50, 21));
+        productAll.add(new Earrings("IS3", "earrning3", Stone.MALACHITE, Color.BLUE, 50, 21));
+        productAll.add(new Earrings("IS4", "earrning4", Stone.MALACHITE, Color.BLUE, 50, 21));
+        productAll.add(new Earrings("IS4", "earrning5", Stone.MALACHITE, Color.BLUE, 50, 21));
+        productAll.add(new Pendant("SS1", "pendant1", Stone.CORAL, Color.GREEN, 50, 21));
+        productAll.add(new Pendant("SS2", "pendant2", Stone.CORAL, Color.GREEN, 50, 21));
+        productAll.add(new Pendant("SS3", "pendant3", Stone.CORAL, Color.GREEN, 50, 21));
+        productAll.add(new Pendant("SS4", "pendant4", Stone.CORAL, Color.GREEN, 50, 21));
+        productAll.add(new Pendant("SS5", "pendant5", Stone.CORAL, Color.GREEN, 50, 21));
 
         customers[0] = new Buyer("Andrey");
         customers[1] = new Buyer("Natasha");
         customers[2] = new Buyer("Nastia");
         customers[3] = new Buyer("Oleg");
 
-        history[0] = new Purchase(customers[0], productAll[1], 10, 20160212);
-        history[1] = new Purchase(customers[1], productAll[14], 7, 20160213);
-        history[2] = new Purchase(customers[1], productAll[19], 8, 20160214);
-        history[3] = new Purchase(customers[3], productAll[19], 8, 20160214);
-        history[4] = new Purchase(customers[2], productAll[0], 10, 20160215);
-        history[5] = new Purchase(customers[2], productAll[2], 5, 20160216);
-        history[6] = new Purchase(customers[0], productAll[10], 1, 20160216);
+        history.add(new Purchase(customers[0], productAll.get(1), 10));
+        history.add(new Purchase(customers[1], productAll.get(14), 7));
+        history.add(new Purchase(customers[1], productAll.get(19), 8));
+        history.add(new Purchase(customers[3], productAll.get(19), 8));
+        history.add(new Purchase(customers[2], productAll.get(0), 10));
+        history.add(new Purchase(customers[2], productAll.get(2), 5));
+        history.add(new Purchase(customers[0], productAll.get(10), 1));
 
     }
 
@@ -101,19 +100,21 @@ public class Shop {
         this.customers = customers;
     }
 
-    public Purchase[] getHistory() {
+    public ArrayList<Purchase> getHistory() {
         return history;
     }
 
-    public void setHistory(Purchase[] history) {
-        this.history = history;
+    public void setHistory(Purchase purchase) {
+        history.add(purchase);
     }
-
-    public Jewelry[] getProductAll() {
+     public Jewelry getProduct(int i){
+         return productAll.get(i);
+     }
+    public ArrayList<Jewelry> getProductAll() {
         return productAll;
     }
 
-    public void setProductAll(Jewelry[] productAll) {
+    public void setProductAll(ArrayList<Jewelry> productAll) {
         this.productAll = productAll;
     }
 
